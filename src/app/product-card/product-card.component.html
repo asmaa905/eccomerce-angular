@@ -19,11 +19,17 @@
   @if(product.discountPercentage){
   <span class="lead onSale p-2 rounded fw-bold">On sale</span>
   } @if(!product.stock){
-  <span class="lead onSale p-2 rounded fw-bold">Out Of Stock</span>
+  <span class="lead p-2 rounded fw-bold">Out Of Stock</span>
   }
-  <p class="lead onSale p-2 rounded fw-bold">
-    <i class="fa fa-bi-star-fill bi-star-fill"></i>
-    <img src="./assets/icons/star.png" alt="" />
-    {{ product.rating }}
-  </p>
+  <div
+    class="lead p-2 rounded fw-bold d-flex"
+    style="width: 40px; height: 40px"
+  >
+    <img
+      src="../assets/icons/star.svg"
+      alt=""
+      style="width: 100%; height: 100%; display: block"
+    />
+    <p>{{ product.rating }}</p>
+  </div>
 </div>

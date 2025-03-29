@@ -1,0 +1,11 @@
+.product {
+  position: relative;
+}
+.onSale {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  padding: 1rem;
+  background-color: lightgreen;
+  font-weight: bold;
+}
