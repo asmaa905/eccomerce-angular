@@ -6,7 +6,9 @@
     <div class="row">
       @for (product of products; track product.id) {
       <!-- send props -->
-      <app-product-card [product]="product"></app-product-card>
+      <div class="col-lg-3 col-md-4 col-sm-6 p-2">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
       }@empty {
       <p class="fw-bold text-white bg-danger">No product found</p>
       }
