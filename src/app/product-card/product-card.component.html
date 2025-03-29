@@ -1,0 +1,33 @@
+<div
+  class="col- v -3 col-md-4 col-sm-6 p-2"
+  [routerLink]="['/products-list', product.id]"
+>
+  <div
+    class="product bg-white border p-3 border-secondary border-3 rounded rounded-sm"
+  >
+    <div
+      class="product-image"
+      style="width: 90%; margin-left: auto; margin-right: auto"
+    >
+      <img [src]="product.thumbnail" alt="" style="width: 100%; height: 100%" />
+    </div>
+    <h2>title: {{ product.title }}</h2>
+    <div class="price d-flex justify-content-between">
+      <p>{{ product.price }}</p>
+      <p class="text-decoration-line-through">
+        {{ product.price - product.discountPercentage * (product.price / 100) }}
+      </p>
+    </div>
+
+    @if(product.discountPercentage){
+    <span class="lead onSale p-2 rounded fw-bold">On sale</span>
+    } @if(!product.stock){
+    <span class="lead onSale p-2 rounded fw-bold">Out Of Stock</span>
+    }
+    <p class="lead onSale p-2 rounded fw-bold">
+      <i class="fa fa-bi-star-fill bi-star-fill"></i>
+      <img src="./assets/icons/star.png" alt="" />
+      {{ product.rating }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto ml-lg-0 mb-2">
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            routerLink="products-list"
+            routerLinkActive="text-danger fw-bold"
+            >Product Page</a
+          >
+        </li>
+        <li class="nav-item mr-auto">
+          <a
+            class="nav-link"
+            routerLink="login"
+            routerLinkActive="text-danger fw-bold"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="login"
+            routerLinkActive="text-danger fw-bold"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >register</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="cart"
+            routerLinkActive="text-danger fw-bold"
+            style="width: 25px; height: 25px"
+            ><img src="../assets/icons/cart.svg" alt="cart" class="w-100 h-100"
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
